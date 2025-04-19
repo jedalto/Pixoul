@@ -9,13 +9,13 @@ public class SpriteSelector : MonoBehaviour
 
     public void SelectSprite01()
     {
-        PlayerPrefs.SetInt("SpriteChoice", 1);
+        PlayerPrefs.SetInt("spriteChoice", 0);
         SceneManager.LoadScene("CustomScene");
     }
 
     public void SelectSprite02()
     {
-        PlayerPrefs.SetInt("SpriteChoice", 2);
+        PlayerPrefs.SetInt("spriteChoice", 1);
         SceneManager.LoadScene("CustomScene");
     }
 }
