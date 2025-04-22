@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CustomScene.unity
     guid: 8c533eb6ee1ef75459544a540b9e9962
+  - enabled: 1
+    path: Assets/Scenes/QuizScene.unity
+    guid: 9cebbf9d83870bd4c988602ad1d7bce1
   m_configObjects: {}
