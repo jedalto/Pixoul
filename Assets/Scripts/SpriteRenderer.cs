@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class SpriteLoader : MonoBehaviour
 {
-    public Sprite whiteSprite;
-    public Sprite graySprite;
+    public Sprite onigiriSprite;
+    public Sprite candySprite;
+    public Sprite breadSprite;
+    public Sprite raddishSprite;
 
-    public Color colorOption0 = Color.cyan;
+    public Color colorOption0 = Color.white;
     public Color colorOption1 = Color.yellow;
 
     // Start is called before the first frame update
@@ -18,9 +20,13 @@ public class SpriteLoader : MonoBehaviour
         int colorChoice = PlayerPrefs.GetInt("spriteColor", 1);
 
         if (spriteChoice == 0)
-            ren.sprite = whiteSprite;
+            ren.sprite = candySprite;
+        else if (spriteChoice == 2) 
+            ren.sprite = onigiriSprite;
         else
-            ren.sprite = graySprite;
+        {
+            ren.sprite = breadSprite;
+        }
 
         if (colorChoice == 0)
             ren.color = colorOption0;

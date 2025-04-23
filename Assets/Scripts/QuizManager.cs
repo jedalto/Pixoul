@@ -13,6 +13,8 @@ public class QuizManager : MonoBehaviour
 
     public TextMeshProUGUI QuestionTxt;
 
+    public List<int> playerAnswers = new List<int>();
+
     private void Start()
     {
         // TODO
@@ -34,16 +36,33 @@ public class QuizManager : MonoBehaviour
         SetAnswers();
     }
 
-    public void Answer()
+    public void Answer(int selectedAnswerIndex)
     {
+        playerAnswers.Add(selectedAnswerIndex);  // store the selected index
         currentQuestionIndex++;
+
         // record answer -> maybe use some kind of table to determine which trait of custom environment this adds to
         if (currentQuestionIndex < QnA.Count)
         {
             generateQuestion();
         } else
         {
+            ProcessResults();
             SceneManager.LoadScene("CustomScene");
+        }
+    }
+
+    void ProcessResults()
+    {
+        int totalAnswers = playerAnswers.Count;
+
+        PlayerPrefs.SetInt("spriteChoice", playerAnswers[0]);
+        PlayerPrefs.SetInt("spriteColor", 0);
+
+        for (int i = 0; i < playerAnswers.Count; i++)
+        {
+            // TODO: translate answers to traits
+            // store in PlayerPrefs
         }
     }
 }

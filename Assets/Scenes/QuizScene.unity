@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 73591085}
   - component: {fileID: 73591084}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,7 +224,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1090930527}
         m_TargetAssemblyTypeName: QuizManager, Assembly-CSharp
         m_MethodName: Answer
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 211558247}
   - component: {fileID: 211558246}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Button03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -373,11 +373,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1090930527}
         m_TargetAssemblyTypeName: QuizManager, Assembly-CSharp
         m_MethodName: Answer
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -434,7 +434,7 @@ GameObject:
   - component: {fileID: 393897324}
   - component: {fileID: 393897323}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Button01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -522,11 +522,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1090930527}
         m_TargetAssemblyTypeName: QuizManager, Assembly-CSharp
         m_MethodName: Answer
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1309,19 +1309,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QnA:
-  - Question: test question 01
+  - Question: Ideal Meal?
     Answers:
-    - 1
-    - 2
-    - 3
-    - 4
+    - Sweet
+    - Savory
+    - Not a meal without rice
+    - Healthy
     UserAnswerIndex: 0
-  - Question: test question 02
+  - Question: 6 / 2(1 + 2)
     Answers:
-    - a
-    - b
-    - c
-    - d
+    - 2 / 3
+    - 9
+    - 1
+    - Can't divide by zero
     UserAnswerIndex: 0
   - Question: test quiz 03
     Answers:
@@ -1330,6 +1330,55 @@ MonoBehaviour:
     - Jiya
     - Josie
     UserAnswerIndex: 0
+  - Question: test quiz 03
+    Answers:
+    - Jane
+    - Ally
+    - Jiya
+    - Josie
+    UserAnswerIndex: 0
+  - Question: test quiz 03
+    Answers:
+    - Jane
+    - Ally
+    - Jiya
+    - Josie
+    UserAnswerIndex: 0
+  - Question: test quiz 03
+    Answers:
+    - Jane
+    - Ally
+    - Jiya
+    - Josie
+    UserAnswerIndex: 0
+  - Question: test quiz 03
+    Answers:
+    - Jane
+    - Ally
+    - Jiya
+    - Josie
+    UserAnswerIndex: 0
+  - Question: test quiz 03
+    Answers:
+    - Jane
+    - Ally
+    - Jiya
+    - Josie
+    UserAnswerIndex: 0
+  - Question: test quiz 03
+    Answers:
+    - Jane
+    - Ally
+    - Jiya
+    - Josie
+    UserAnswerIndex: 0
+  - Question: Did you enjoy the quiz?
+    Answers:
+    - Yes
+    - It was ok
+    - nah
+    - . . .
+    UserAnswerIndex: 0
   options:
   - {fileID: 73591082}
   - {fileID: 1879113081}
@@ -1337,6 +1386,7 @@ MonoBehaviour:
   - {fileID: 211558244}
   currentQuestionIndex: 0
   QuestionTxt: {fileID: 1159555518}
+  playerAnswers: 
 --- !u!4 &1090930528
 Transform:
   m_ObjectHideFlags: 0
@@ -1770,8 +1820,8 @@ RectTransform:
   m_Children:
   - {fileID: 847363925}
   - {fileID: 73591083}
-  - {fileID: 1879113082}
   - {fileID: 393897322}
+  - {fileID: 1879113082}
   - {fileID: 211558245}
   m_Father: {fileID: 1194504862}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1832,7 +1882,7 @@ GameObject:
   - component: {fileID: 1879113084}
   - component: {fileID: 1879113083}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Button02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1920,11 +1970,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1090930527}
         m_TargetAssemblyTypeName: QuizManager, Assembly-CSharp
         m_MethodName: Answer
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
