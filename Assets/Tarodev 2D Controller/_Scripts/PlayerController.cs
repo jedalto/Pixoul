@@ -20,6 +20,9 @@ namespace TarodevController
         private Vector2 _frameVelocity;
         private bool _cachedQueryStartInColliders;
 
+        [SerializeField] private Transform _expressionTransform; // child expression sprite
+        private bool _facingRight = true;
+
         #region Interface
 
         public Vector2 FrameInput => _frameInput.Move;
@@ -163,6 +166,28 @@ namespace TarodevController
             {
                 _frameVelocity.x = Mathf.MoveTowards(_frameVelocity.x, _frameInput.Move.x * _stats.MaxSpeed, _stats.Acceleration * Time.fixedDeltaTime);
             }
+
+            // flip child sprite depending on moving direction
+            if (_frameInput.Move.x > 0 && !_facingRight)
+            {
+                Flip();
+            }
+            else if (_frameInput.Move.x < 0 && _facingRight)
+            {
+                Flip();
+            }
+        }
+
+        private void Flip()
+        {
+            _facingRight = !_facingRight;
+            // flip expression
+            if (_expressionTransform != null)
+            {
+                Vector3 scale = _expressionTransform.localScale;
+                scale.x *= -1;
+                _expressionTransform.localScale = scale;
+            }
         }
 
         #endregion
@@ -209,4 +234,5 @@ namespace TarodevController
         public event Action Jumped;
         public Vector2 FrameInput { get; }
     }
+
 }

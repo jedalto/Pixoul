@@ -7,17 +7,17 @@ public class PlayerSpriteLoader : MonoBehaviour
     public Sprite breadSprite;
     public Sprite radishSprite;
 
-    public Color colorOption0 = Color.white;
-    public Color colorOption1 = Color.white;
-    public Color colorOption2 = Color.white;
-    public Color colorOption3 = Color.white;
+    public Color colorOption0;
+    public Color colorOption1;
+    public Color colorOption2;
+    public Color colorOption3;
 
     void Start()
     {
         SpriteRenderer ren = GetComponent<SpriteRenderer>();
         int spriteChoice = PlayerPrefs.GetInt("spriteChoice", 1);
         int colorChoice = PlayerPrefs.GetInt("spriteColor", 0);
-
+        
         switch (spriteChoice)
         {
             case 0: ren.sprite = candySprite; break;

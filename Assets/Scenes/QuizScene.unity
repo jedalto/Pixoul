@@ -434,7 +434,7 @@ GameObject:
   - component: {fileID: 393897324}
   - component: {fileID: 393897323}
   m_Layer: 5
-  m_Name: Button02
+  m_Name: Button01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1326,8 +1326,8 @@ MonoBehaviour:
   - Question: Which of these animals would you want as a companion?
     Answers:
     - Dragon
-    - Badger
     - Bison
+    - Badger
     - Duck
     UserAnswerIndex: 0
   - Question: test quiz 03
@@ -1820,8 +1820,8 @@ RectTransform:
   m_Children:
   - {fileID: 847363925}
   - {fileID: 73591083}
-  - {fileID: 1879113082}
   - {fileID: 393897322}
+  - {fileID: 1879113082}
   - {fileID: 211558245}
   m_Father: {fileID: 1194504862}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1882,7 +1882,7 @@ GameObject:
   - component: {fileID: 1879113084}
   - component: {fileID: 1879113083}
   m_Layer: 5
-  m_Name: Button01
+  m_Name: Button02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
