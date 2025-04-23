@@ -57,7 +57,7 @@ public class QuizManager : MonoBehaviour
         int totalAnswers = playerAnswers.Count;
 
         PlayerPrefs.SetInt("spriteChoice", playerAnswers[0]);
-        PlayerPrefs.SetInt("spriteColor", 0);
+        PlayerPrefs.SetInt("spriteColor", playerAnswers[2]);
 
         for (int i = 0; i < playerAnswers.Count; i++)
         {

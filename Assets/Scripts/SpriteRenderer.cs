@@ -11,6 +11,8 @@ public class SpriteLoader : MonoBehaviour
 
     public Color colorOption0 = Color.white;
     public Color colorOption1 = Color.yellow;
+    public Color colorOption2;
+    public Color colorOption3;
 
     // Start is called before the first frame update
     void Start()
