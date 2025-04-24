@@ -52,6 +52,8 @@ namespace TarodevController
 
             bool isMoving = Mathf.Abs(_frameInput.Move.x) > 0.1f;
             legsAnimator.SetBool("IsWalking", isMoving);
+            bool isJumping = !_grounded && _frameVelocity.y > 0;
+            legsAnimator.SetBool("IsJumping", isJumping);
 
             GatherInput();
 
