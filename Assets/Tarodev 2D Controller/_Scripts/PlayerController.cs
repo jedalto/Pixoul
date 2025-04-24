@@ -21,7 +21,10 @@ namespace TarodevController
         private bool _cachedQueryStartInColliders;
 
         [SerializeField] private Transform _expressionTransform; // child expression sprite
+        [SerializeField] private Transform _legsTransform;  // child legs sprite
         private bool _facingRight = true;
+        [SerializeField] private Animator legsAnimator;  // legs animator
+
 
         #region Interface
 
@@ -43,8 +46,15 @@ namespace TarodevController
 
         private void Update()
         {
+
+
             _time += Time.deltaTime;
+
+            bool isMoving = Mathf.Abs(_frameInput.Move.x) > 0.1f;
+            legsAnimator.SetBool("IsWalking", isMoving);
+
             GatherInput();
+
         }
 
         private void GatherInput()
@@ -181,6 +191,7 @@ namespace TarodevController
         private void Flip()
         {
             _facingRight = !_facingRight;
+
             // flip expression
             if (_expressionTransform != null)
             {
@@ -188,7 +199,16 @@ namespace TarodevController
                 scale.x *= -1;
                 _expressionTransform.localScale = scale;
             }
+
+            if (_legsTransform != null)
+            {
+                Vector3 scale = _legsTransform.localScale;
+                scale.x *= -1;
+                _legsTransform.localScale = scale;
+            }
         }
+
+
 
         #endregion
 

@@ -7,8 +7,8 @@ namespace TarodevController
     /// </summary>
     public class PlayerAnimator : MonoBehaviour
     {
-        [Header("References")] [SerializeField]
-        private Animator _anim;
+        //[Header("References")] [SerializeField]
+        //private Animator _anim;
 
         [SerializeField] private SpriteRenderer _sprite;
 
@@ -18,10 +18,10 @@ namespace TarodevController
         [SerializeField] private float _maxTilt = 5;
         [SerializeField] private float _tiltSpeed = 20;
 
-        [Header("Particles")] [SerializeField] private ParticleSystem _jumpParticles;
-        [SerializeField] private ParticleSystem _launchParticles;
-        [SerializeField] private ParticleSystem _moveParticles;
-        [SerializeField] private ParticleSystem _landParticles;
+        //[Header("Particles")] [SerializeField] private ParticleSystem _jumpParticles;
+        //[SerializeField] private ParticleSystem _launchParticles;
+        //[SerializeField] private ParticleSystem _moveParticles;
+        //[SerializeField] private ParticleSystem _landParticles;
 
         [Header("Audio Clips")] [SerializeField]
         private AudioClip[] _footsteps;
@@ -42,7 +42,7 @@ namespace TarodevController
             _player.Jumped += OnJumped;
             _player.GroundedChanged += OnGroundedChanged;
 
-            _moveParticles.Play();
+            //_moveParticles.Play();
         }
 
         private void OnDisable()
@@ -50,7 +50,7 @@ namespace TarodevController
             _player.Jumped -= OnJumped;
             _player.GroundedChanged -= OnGroundedChanged;
 
-            _moveParticles.Stop();
+            //_moveParticles.Stop();
         }
 
         private void Update()
@@ -74,28 +74,28 @@ namespace TarodevController
         private void HandleIdleSpeed()
         {
             var inputStrength = Mathf.Abs(_player.FrameInput.x);
-            _anim.SetFloat(IdleSpeedKey, Mathf.Lerp(1, _maxIdleSpeed, inputStrength));
-            _moveParticles.transform.localScale = Vector3.MoveTowards(_moveParticles.transform.localScale, Vector3.one * inputStrength, 2 * Time.deltaTime);
+            //_anim.SetFloat(IdleSpeedKey, Mathf.Lerp(1, _maxIdleSpeed, inputStrength));
+            //_moveParticles.transform.localScale = Vector3.MoveTowards(_moveParticles.transform.localScale, Vector3.one * inputStrength, 2 * Time.deltaTime);
         }
 
         private void HandleCharacterTilt()
         {
             var runningTilt = _grounded ? Quaternion.Euler(0, 0, _maxTilt * _player.FrameInput.x) : Quaternion.identity;
-            _anim.transform.up = Vector3.RotateTowards(_anim.transform.up, runningTilt * Vector2.up, _tiltSpeed * Time.deltaTime, 0f);
+            //_anim.transform.up = Vector3.RotateTowards(_anim.transform.up, runningTilt * Vector2.up, _tiltSpeed * Time.deltaTime, 0f);
         }
 
         private void OnJumped()
         {
-            _anim.SetTrigger(JumpKey);
-            _anim.ResetTrigger(GroundedKey);
+            //_anim.SetTrigger(JumpKey);
+            //_anim.ResetTrigger(GroundedKey);
 
 
-            if (_grounded) // Avoid coyote
+            /*if (_grounded) // Avoid coyote
             {
                 SetColor(_jumpParticles);
                 SetColor(_launchParticles);
                 _jumpParticles.Play();
-            }
+            }*/
         }
 
         private void OnGroundedChanged(bool grounded, float impact)
@@ -105,18 +105,18 @@ namespace TarodevController
             if (grounded)
             {
                 DetectGroundColor();
-                SetColor(_landParticles);
+                //SetColor(_landParticles);
 
-                _anim.SetTrigger(GroundedKey);
+                //_anim.SetTrigger(GroundedKey);
                 _source.PlayOneShot(_footsteps[Random.Range(0, _footsteps.Length)]);
-                _moveParticles.Play();
+                //_moveParticles.Play();
 
-                _landParticles.transform.localScale = Vector3.one * Mathf.InverseLerp(0, 40, impact);
-                _landParticles.Play();
+                //_landParticles.transform.localScale = Vector3.one * Mathf.InverseLerp(0, 40, impact);
+                //_landParticles.Play();
             }
             else
             {
-                _moveParticles.Stop();
+                //_moveParticles.Stop();
             }
         }
 
@@ -127,14 +127,14 @@ namespace TarodevController
             if (!hit || hit.collider.isTrigger || !hit.transform.TryGetComponent(out SpriteRenderer r)) return;
             var color = r.color;
             _currentGradient = new ParticleSystem.MinMaxGradient(color * 0.9f, color * 1.2f);
-            SetColor(_moveParticles);
+            //SetColor(_moveParticles);
         }
 
-        private void SetColor(ParticleSystem ps)
-        {
-            var main = ps.main;
-            main.startColor = _currentGradient;
-        }
+        //private void SetColor(ParticleSystem ps)
+        //{
+        //    var main = ps.main;
+        //    main.startColor = _currentGradient;
+        //}
 
         private static readonly int GroundedKey = Animator.StringToHash("Grounded");
         private static readonly int IdleSpeedKey = Animator.StringToHash("IdleSpeed");
