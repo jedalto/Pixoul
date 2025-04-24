@@ -20,13 +20,13 @@ MonoBehaviour:
   HorizontalDeadZoneThreshold: 0.1
   MaxSpeed: 7
   Acceleration: 120
-  GroundDeceleration: 60
+  GroundDeceleration: 90
   AirDeceleration: 30
-  GroundingForce: -1.5
+  GroundingForce: 0
   GrounderDistance: 0.05
-  JumpPower: 20
-  MaxFallSpeed: 40
-  FallAcceleration: 110
+  JumpPower: 22
+  MaxFallSpeed: 20
+  FallAcceleration: 90
   JumpEndEarlyGravityModifier: 3
   CoyoteTime: 0.15
   JumpBuffer: 0.2

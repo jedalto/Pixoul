@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: sprite-legs
+    uniqueID: 1642757205
+    locked: 0
+  - name: sprite-body
+    uniqueID: 4121264987
+    locked: 0
+  - name: sprite-expression
+    uniqueID: 1596984491
+    locked: 0
