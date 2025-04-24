@@ -58,6 +58,7 @@ public class QuizManager : MonoBehaviour
 
         PlayerPrefs.SetInt("spriteChoice", playerAnswers[0]);
         PlayerPrefs.SetInt("spriteColor", playerAnswers[2]);
+        PlayerPrefs.SetInt("groundTextureChoice", playerAnswers[3]);
 
         for (int i = 0; i < playerAnswers.Count; i++)
         {
