@@ -41,6 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: background
+    uniqueID: 1494853533
+    locked: 0
+  - name: door
+    uniqueID: 530123555
+    locked: 0
   - name: sprite-legs
     uniqueID: 1642757205
     locked: 0
@@ -52,4 +58,7 @@ TagManager:
     locked: 0
   - name: ground
     uniqueID: 2801931505
+    locked: 0
+  - name: ground-texture
+    uniqueID: 984645521
     locked: 0
