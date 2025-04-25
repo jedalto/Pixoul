@@ -1361,12 +1361,12 @@ MonoBehaviour:
     - Rice
     - Healthy
     UserAnswerIndex: 0
-  - Question: Sound Question
+  - Question: How Do You Relax?
     Answers:
-    - 2 / 3
-    - 9
-    - 1
-    - Can't divide by zero
+    - Sleep
+    - Be active
+    - Play games
+    - I don't
     UserAnswerIndex: 0
   - Question: Which of these animals would you want as a companion?
     Answers:
@@ -1382,46 +1382,18 @@ MonoBehaviour:
     - In the House
     - No Service
     UserAnswerIndex: 0
-  - Question: background
+  - Question: How Would You Best Describe Yourself?
     Answers:
-    - library
-    - night sky
-    - forest
-    - spiderwebs
-    UserAnswerIndex: 0
-  - Question: test quiz 03
-    Answers:
-    - Jane
-    - Ally
-    - Jiya
-    - Josie
-    UserAnswerIndex: 0
-  - Question: test quiz 03
-    Answers:
-    - Jane
-    - Ally
-    - Jiya
-    - Josie
-    UserAnswerIndex: 0
-  - Question: test quiz 03
-    Answers:
-    - Jane
-    - Ally
-    - Jiya
-    - Josie
-    UserAnswerIndex: 0
-  - Question: test quiz 03
-    Answers:
-    - Jane
-    - Ally
-    - Jiya
-    - Josie
+    - Smart
+    - Sleepy
+    - Bold
+    - Creepy
     UserAnswerIndex: 0
   - Question: Did you enjoy the quiz?
     Answers:
     - Yes
-    - It was ok
     - nah
+    - It was ok
     - . . .
     UserAnswerIndex: 0
   options:

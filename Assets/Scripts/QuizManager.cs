@@ -57,14 +57,10 @@ public class QuizManager : MonoBehaviour
         int totalAnswers = playerAnswers.Count;
 
         PlayerPrefs.SetInt("spriteChoice", playerAnswers[0]);
+        PlayerPrefs.SetInt("soundChoice", playerAnswers[1]);
         PlayerPrefs.SetInt("spriteColor", playerAnswers[2]);
         PlayerPrefs.SetInt("groundTextureChoice", playerAnswers[3]);
         PlayerPrefs.SetInt("backgroundTextureChoice", playerAnswers[4]);
-
-        for (int i = 0; i < playerAnswers.Count; i++)
-        {
-            // TODO: translate answers to traits
-            // store in PlayerPrefs
-        }
+        PlayerPrefs.SetInt("expressionChoice", playerAnswers[5]);
     }
 }
